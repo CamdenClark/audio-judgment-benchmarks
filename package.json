@@ -1,0 +1,17 @@
+{
+  "name": "audio-judgment-benchmarks",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "dev": "wrangler dev",
+    "build": "wrangler deploy --dry-run",
+    "deploy": "wrangler deploy",
+    "generate": "node scripts/generate.mjs",
+    "generate:audio": "node scripts/generate.mjs --audio-only",
+    "judge": "node scripts/generate.mjs --judge-only"
+  },
+  "devDependencies": {
+    "wrangler": "4.158.0"
+  }
+}

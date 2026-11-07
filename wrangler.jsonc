@@ -1,0 +1,12 @@
+{
+  "$schema": "node_modules/wrangler/config-schema.json",
+  "name": "audio-judgment-benchmarks",
+  "account_id": "62025cd9ce8dabd2cb6651b6e058d41a",
+  "compatibility_date": "2026-11-06",
+  "assets": {
+    "directory": "./public",
+    "html_handling": "auto-trailing-slash",
+    "not_found_handling": "404-page"
+  },
+  "workers_dev": true
+}

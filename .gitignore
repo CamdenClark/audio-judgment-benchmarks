@@ -1,0 +1,10 @@
+node_modules/
+.wrangler/
+dist/
+.openrouter-api-key
+.cloudflare*
+.env
+.env.*
+.dev.vars
+.dev.vars.*
+.DS_Store

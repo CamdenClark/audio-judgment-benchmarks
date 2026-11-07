@@ -1,0 +1,61 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Spanish speech examples and Clef-omni's judgments of whether each answer is correct.">
+  <meta name="color-scheme" content="light">
+  <title>Spanish audio examples</title>
+  <link rel="stylesheet" href="/styles.css">
+  <script src="/app.js" defer></script>
+</head>
+<body>
+  <main>
+    <header>
+      <h1>Spanish audio examples</h1>
+      <a id="download-dataset" class="button" href="/data/examples.json" download="audio-judgment-examples.json">Download examples (JSON)</a>
+    </header>
+
+    <div class="filters" role="group" aria-label="Filter model judgments">
+      <button type="button" data-filter="all" aria-pressed="true" aria-controls="examples" disabled>All</button>
+      <button type="button" data-filter="matches" aria-pressed="false" aria-controls="examples" disabled>Matches</button>
+      <button type="button" data-filter="mistakes" aria-pressed="false" aria-controls="examples" disabled>Mistakes</button>
+    </div>
+
+    <p id="load-status" role="status">Loading examples…</p>
+    <div id="load-error" role="alert" hidden>
+      <p id="load-error-message">Could not load the examples.</p>
+      <button id="retry-data" type="button">Try again</button>
+    </div>
+    <ol id="examples" aria-label="Audio examples"></ol>
+    <noscript><p>JavaScript is needed to display the examples. The JSON download is still available.</p></noscript>
+
+    <section id="about" aria-labelledby="about-title">
+      <h2 id="about-title">Why I made this</h2>
+      <p>I wanted to practice Spanish flashcards out loud and get a quick right-or-wrong answer. Clef-omni could judge audio without a full conversation, but it sometimes accepted <span lang="es">mañana</span> (“tomorrow”) when I expected <span lang="es">manzana</span> (“apple”).</p>
+      <p>I made these examples to see which differences it misses. The clips are synthetic speech from OpenRouter; “Spoken” is the requested script. Each result is a saved Cloudflare Clef-omni judgment of the audio and expected answer, not the spoken script. P(correct) ≥ 0.5 means correct. Stress-only and double-r differences are excluded. This is not an accuracy estimate.</p>
+    </section>
+  </main>
+
+  <template id="example-template">
+    <li class="example" tabindex="-1">
+      <div class="example-heading"><h2 class="prompt"></h2><span class="result-badge"></span></div>
+      <dl class="responses">
+        <div><dt>Expected</dt><dd><span class="expected-text" lang="es"></span> <span class="expected-translation translation"></span></dd></div>
+        <div><dt>Spoken</dt><dd><span class="spoken-text" lang="es"></span> <span class="spoken-translation translation"></span></dd></div>
+      </dl>
+      <audio controls preload="none"></audio>
+      <dl class="judgment">
+        <div><dt>Expected</dt><dd class="expected-grade"></dd></div>
+        <div><dt>Judged</dt><dd class="judged-grade"></dd></div>
+        <div><dt>Probability</dt><dd><span class="probability"></span><span class="probability-label">P(correct)</span></dd></div>
+      </dl>
+      <div class="audio-error" role="alert" hidden>
+        <p>Audio could not be loaded.</p>
+        <button class="retry-audio" type="button">Retry audio</button>
+        <a class="audio-file">Open audio file</a>
+      </div>
+    </li>
+  </template>
+</body>
+</html>

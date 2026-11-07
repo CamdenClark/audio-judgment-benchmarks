@@ -1,0 +1,1983 @@
+{
+  "version": 1,
+  "model": "@cf/cloudflare/clef-omni",
+  "threshold": 0.5,
+  "examples": [
+    {
+      "id": "manana-manzana",
+      "category": "Similar sounds",
+      "title": "Apple or tomorrow?",
+      "prompt": "Say “apple” in Spanish.",
+      "expectedText": "manzana",
+      "spokenText": "mañana",
+      "expectedTranslation": "apple",
+      "spokenTranslation": "tomorrow",
+      "expectedCorrect": false,
+      "note": "Mañana means “tomorrow,” not “apple” (manzana), despite the similar sounds.",
+      "audio": {
+        "src": "/audio/manana-manzana.mp3",
+        "model": "openai/gpt-audio-mini",
+        "voice": "alloy",
+        "generatedAt": "2026-11-06T18:55:22.321Z",
+        "sha256": "34ea32350cb57af582f3aa27785bbc62f0579da63abbba0ca46fb98f7b1122dd",
+        "transcript": "mañana",
+        "sourceFormat": "pcm16",
+        "durationSeconds": 1.35
+      },
+      "judgment": {
+        "probabilityCorrect": 0.8933,
+        "isCorrect": true,
+        "elapsedMs": 321,
+        "judgedAt": "2026-11-06T18:56:57.861Z",
+        "model": "@cf/cloudflare/clef-omni",
+        "request": {
+          "model": "clef-omni",
+          "state": "This is a Spanish language drill. Drill: Say “apple” in Spanish.\nExpected response: manzana\nGrade correctness from the actual recording, not from the expected response alone.",
+          "questions": {
+            "is_correct": {
+              "type": "noul",
+              "instructions": "Does the spoken Spanish response correctly answer the drill? Judge the actual audio. Reject different words, changed numbers, or missing negation; tolerate natural accent variation."
+            }
+          }
+        },
+        "response": {
+          "model": "clef-omni",
+          "answers": {
+            "is_correct": {
+              "type": "noul",
+              "noul": 0.8933
+            }
+          },
+          "usage": {
+            "input_tokens": 224,
+            "output_tokens": 0
+          }
+        }
+      }
+    },
+    {
+      "id": "manzana-control",
+      "category": "Correct control",
+      "title": "An actual apple",
+      "prompt": "Say “apple” in Spanish.",
+      "expectedText": "manzana",
+      "spokenText": "manzana",
+      "expectedTranslation": "apple",
+      "spokenTranslation": "apple",
+      "expectedCorrect": true,
+      "note": "The spoken word matches the requested Spanish word for apple.",
+      "audio": {
+        "src": "/audio/manzana-control.mp3",
+        "model": "openai/gpt-audio-mini",
+        "voice": "alloy",
+        "generatedAt": "2026-11-06T18:55:23.290Z",
+        "sha256": "1ce48a87a622e60cc3f12de9245be2137997059005b02ee02726772212aedcfe",
+        "transcript": "manzana",
+        "sourceFormat": "pcm16",
+        "durationSeconds": 1.1
+      },
+      "judgment": {
+        "probabilityCorrect": 0.9803,
+        "isCorrect": true,
+        "elapsedMs": 306,
+        "judgedAt": "2026-11-06T18:56:58.169Z",
+        "model": "@cf/cloudflare/clef-omni",
+        "request": {
+          "model": "clef-omni",
+          "state": "This is a Spanish language drill. Drill: Say “apple” in Spanish.\nExpected response: manzana\nGrade correctness from the actual recording, not from the expected response alone.",
+          "questions": {
+            "is_correct": {
+              "type": "noul",
+              "instructions": "Does the spoken Spanish response correctly answer the drill? Judge the actual audio. Reject different words, changed numbers, or missing negation; tolerate natural accent variation."
+            }
+          }
+        },
+        "response": {
+          "model": "clef-omni",
+          "answers": {
+            "is_correct": {
+              "type": "noul",
+              "noul": 0.9803
+            }
+          },
+          "usage": {
+            "input_tokens": 221,
+            "output_tokens": 0
+          }
+        }
+      }
+    },
+    {
+      "id": "quince-cincuenta",
+      "category": "Changed number",
+      "title": "Fifteen or fifty?",
+      "prompt": "Say “I am fifteen years old” in Spanish.",
+      "expectedText": "Tengo quince años.",
+      "spokenText": "Tengo cincuenta años.",
+      "expectedTranslation": "I am fifteen years old.",
+      "spokenTranslation": "I am fifty years old.",
+      "expectedCorrect": false,
+      "note": "Cincuenta changes the age to fifty; the drill asks for fifteen (quince).",
+      "audio": {
+        "src": "/audio/quince-cincuenta.mp3",
+        "model": "openai/gpt-audio-mini",
+        "voice": "alloy",
+        "generatedAt": "2026-11-06T18:55:24.412Z",
+        "sha256": "228abddc0b37623e523fd2f81508a1ebffaa28c8c2c5af3d60d89758fc72e563",
+        "transcript": "Tengo cincuenta años.",
+        "sourceFormat": "pcm16",
+        "durationSeconds": 1.9
+      },
+      "judgment": {
+        "probabilityCorrect": 0.0101,
+        "isCorrect": false,
+        "elapsedMs": 206,
+        "judgedAt": "2026-11-06T18:56:58.376Z",
+        "model": "@cf/cloudflare/clef-omni",
+        "request": {
+          "model": "clef-omni",
+          "state": "This is a Spanish language drill. Drill: Say “I am fifteen years old” in Spanish.\nExpected response: Tengo quince años.\nGrade correctness from the actual recording, not from the expected response alone.",
+          "questions": {
+            "is_correct": {
+              "type": "noul",
+              "instructions": "Does the spoken Spanish response correctly answer the drill? Judge the actual audio. Reject different words, changed numbers, or missing negation; tolerate natural accent variation."
+            }
+          }
+        },
+        "response": {
+          "model": "clef-omni",
+          "answers": {
+            "is_correct": {
+              "type": "noul",
+              "noul": 0.0101
+            }
+          },
+          "usage": {
+            "input_tokens": 237,
+            "output_tokens": 0
+          }
+        }
+      }
+    },
+    {
+      "id": "dropped-negation",
+      "category": "Missing negation",
+      "title": "A coffee reversal",
+      "prompt": "Say “I don't want coffee” in Spanish.",
+      "expectedText": "No quiero café.",
+      "spokenText": "Quiero café.",
+      "expectedTranslation": "I don't want coffee.",
+      "spokenTranslation": "I want coffee.",
+      "expectedCorrect": false,
+      "note": "Omitting “no” reverses the meaning from not wanting coffee to wanting it.",
+      "audio": {
+        "src": "/audio/dropped-negation.mp3",
+        "model": "openai/gpt-audio-mini",
+        "voice": "alloy",
+        "generatedAt": "2026-11-06T18:56:19.193Z",
+        "sha256": "f3ba83d866feaf03fbcb079a997123f374065daa184cf41fa44724924efb6866",
+        "transcript": "Quiero café.",
+        "sourceFormat": "pcm16",
+        "durationSeconds": 1.2
+      },
+      "judgment": {
+        "probabilityCorrect": 0.0258,
+        "isCorrect": false,
+        "elapsedMs": 257,
+        "judgedAt": "2026-11-06T18:56:58.634Z",
+        "model": "@cf/cloudflare/clef-omni",
+        "request": {
+          "model": "clef-omni",
+          "state": "This is a Spanish language drill. Drill: Say “I don't want coffee” in Spanish.\nExpected response: No quiero café.\nGrade correctness from the actual recording, not from the expected response alone.",
+          "questions": {
+            "is_correct": {
+              "type": "noul",
+              "instructions": "Does the spoken Spanish response correctly answer the drill? Judge the actual audio. Reject different words, changed numbers, or missing negation; tolerate natural accent variation."
+            }
+          }
+        },
+        "response": {
+          "model": "clef-omni",
+          "answers": {
+            "is_correct": {
+              "type": "noul",
+              "noul": 0.0258
+            }
+          },
+          "usage": {
+            "input_tokens": 226,
+            "output_tokens": 0
+          }
+        }
+      }
+    },
+    {
+      "id": "cosa-casa",
+      "category": "Similar sounds",
+      "title": "Thing or house?",
+      "prompt": "Say “house” in Spanish.",
+      "expectedText": "casa",
+      "spokenText": "cosa",
+      "expectedTranslation": "house",
+      "spokenTranslation": "thing",
+      "expectedCorrect": false,
+      "note": "A vowel changes casa (house) into cosa (thing).",
+      "audio": {
+        "src": "/audio/cosa-casa.mp3",
+        "model": "openai/gpt-audio-mini",
+        "voice": "alloy",
+        "generatedAt": "2026-11-06T22:24:53.714Z",
+        "sha256": "385f01bbe654503df6875c9386db17e9437187e67b0906c2792e617b6889d24c",
+        "transcript": "cosa",
+        "sourceFormat": "pcm16",
+        "durationSeconds": 1.45
+      },
+      "judgment": {
+        "probabilityCorrect": 0.9185,
+        "isCorrect": true,
+        "elapsedMs": 247,
+        "judgedAt": "2026-11-06T22:24:53.962Z",
+        "model": "@cf/cloudflare/clef-omni",
+        "request": {
+          "model": "clef-omni",
+          "state": "This is a Spanish language drill. Drill: Say “house” in Spanish.\nExpected response: casa\nGrade correctness from the actual recording, not from the expected response alone.",
+          "questions": {
+            "is_correct": {
+              "type": "noul",
+              "instructions": "Does the spoken Spanish response correctly answer the drill? Judge the actual audio. Reject different words, changed numbers, or missing negation; tolerate natural accent variation."
+            }
+          }
+        },
+        "response": {
+          "model": "clef-omni",
+          "answers": {
+            "is_correct": {
+              "type": "noul",
+              "noul": 0.9185
+            }
+          },
+          "usage": {
+            "input_tokens": 223,
+            "output_tokens": 0
+          }
+        }
+      }
+    },
+    {
+      "id": "casa-control",
+      "category": "Correct control",
+      "title": "A house, correctly",
+      "prompt": "Say “house” in Spanish.",
+      "expectedText": "casa",
+      "spokenText": "casa",
+      "expectedTranslation": "house",
+      "spokenTranslation": "house",
+      "expectedCorrect": true,
+      "note": "The spoken word correctly names a house.",
+      "audio": {
+        "src": "/audio/casa-control.mp3",
+        "model": "openai/gpt-audio-mini",
+        "voice": "alloy",
+        "generatedAt": "2026-11-06T22:24:55.443Z",
+        "sha256": "e4eb31209b5af7ca727f37cb2878c137d9de5eed1e8b83732a092931946eb7c6",
+        "transcript": "casa",
+        "sourceFormat": "pcm16",
+        "durationSeconds": 1
+      },
+      "judgment": {
+        "probabilityCorrect": 0.987,
+        "isCorrect": true,
+        "elapsedMs": 188,
+        "judgedAt": "2026-11-06T22:24:55.632Z",
+        "model": "@cf/cloudflare/clef-omni",
+        "request": {
+          "model": "clef-omni",
+          "state": "This is a Spanish language drill. Drill: Say “house” in Spanish.\nExpected response: casa\nGrade correctness from the actual recording, not from the expected response alone.",
+          "questions": {
+            "is_correct": {
+              "type": "noul",
+              "instructions": "Does the spoken Spanish response correctly answer the drill? Judge the actual audio. Reject different words, changed numbers, or missing negation; tolerate natural accent variation."
+            }
+          }
+        },
+        "response": {
+          "model": "clef-omni",
+          "answers": {
+            "is_correct": {
+              "type": "noul",
+              "noul": 0.987
+            }
+          },
+          "usage": {
+            "input_tokens": 217,
+            "output_tokens": 0
+          }
+        }
+      }
+    },
+    {
+      "id": "trece-treinta",
+      "category": "Changed number",
+      "title": "Thirteen or thirty?",
+      "prompt": "Say “thirty” in Spanish.",
+      "expectedText": "treinta",
+      "spokenText": "trece",
+      "expectedTranslation": "thirty",
+      "spokenTranslation": "thirteen",
+      "expectedCorrect": false,
+      "note": "Trece is thirteen, not thirty (treinta).",
+      "audio": {
+        "src": "/audio/trece-treinta.mp3",
+        "model": "openai/gpt-audio-mini",
+        "voice": "alloy",
+        "generatedAt": "2026-11-06T22:24:56.923Z",
+        "sha256": "47ea2db78b80b790758986fab8f9c98be79e80554f6cbd81ce0df9e3fe6217c6",
+        "transcript": "trece",
+        "sourceFormat": "pcm16",
+        "durationSeconds": 0.85
+      },
+      "judgment": {
+        "probabilityCorrect": 0.2298,
+        "isCorrect": false,
+        "elapsedMs": 222,
+        "judgedAt": "2026-11-06T22:24:57.146Z",
+        "model": "@cf/cloudflare/clef-omni",
+        "request": {
+          "model": "clef-omni",
+          "state": "This is a Spanish language drill. Drill: Say “thirty” in Spanish.\nExpected response: treinta\nGrade correctness from the actual recording, not from the expected response alone.",
+          "questions": {
+            "is_correct": {
+              "type": "noul",
+              "instructions": "Does the spoken Spanish response correctly answer the drill? Judge the actual audio. Reject different words, changed numbers, or missing negation; tolerate natural accent variation."
+            }
+          }
+        },
+        "response": {
+          "model": "clef-omni",
+          "answers": {
+            "is_correct": {
+              "type": "noul",
+              "noul": 0.2298
+            }
+          },
+          "usage": {
+            "input_tokens": 217,
+            "output_tokens": 0
+          }
+        }
+      }
+    },
+    {
+      "id": "treinta-control",
+      "category": "Correct control",
+      "title": "Thirty, correctly",
+      "prompt": "Say “thirty” in Spanish.",
+      "expectedText": "treinta",
+      "spokenText": "treinta",
+      "expectedTranslation": "thirty",
+      "spokenTranslation": "thirty",
+      "expectedCorrect": true,
+      "note": "The response supplies the requested number, thirty.",
+      "audio": {
+        "src": "/audio/treinta-control.mp3",
+        "model": "openai/gpt-audio-mini",
+        "voice": "alloy",
+        "generatedAt": "2026-11-06T22:24:58.462Z",
+        "sha256": "2d9c14dfb73c01d525e597106fb9ffb83f8e0c7c171de4d79a85b15c58ff99be",
+        "transcript": "treinta",
+        "sourceFormat": "pcm16",
+        "durationSeconds": 0.95
+      },
+      "judgment": {
+        "probabilityCorrect": 0.9813,
+        "isCorrect": true,
+        "elapsedMs": 261,
+        "judgedAt": "2026-11-06T22:24:58.724Z",
+        "model": "@cf/cloudflare/clef-omni",
+        "request": {
+          "model": "clef-omni",
+          "state": "This is a Spanish language drill. Drill: Say “thirty” in Spanish.\nExpected response: treinta\nGrade correctness from the actual recording, not from the expected response alone.",
+          "questions": {
+            "is_correct": {
+              "type": "noul",
+              "instructions": "Does the spoken Spanish response correctly answer the drill? Judge the actual audio. Reject different words, changed numbers, or missing negation; tolerate natural accent variation."
+            }
+          }
+        },
+        "response": {
+          "model": "clef-omni",
+          "answers": {
+            "is_correct": {
+              "type": "noul",
+              "noul": 0.9813
+            }
+          },
+          "usage": {
+            "input_tokens": 218,
+            "output_tokens": 0
+          }
+        }
+      }
+    },
+    {
+      "id": "negation-control",
+      "category": "Correct control",
+      "title": "No coffee, as requested",
+      "prompt": "Say “I don't want coffee” in Spanish.",
+      "expectedText": "No quiero café.",
+      "spokenText": "No quiero café.",
+      "expectedTranslation": "I don't want coffee.",
+      "spokenTranslation": "I don't want coffee.",
+      "expectedCorrect": true,
+      "note": "The response preserves the negation and correctly declines coffee.",
+      "audio": {
+        "src": "/audio/negation-control.mp3",
+        "model": "openai/gpt-audio-mini",
+        "voice": "alloy",
+        "generatedAt": "2026-11-06T22:25:00.417Z",
+        "sha256": "3d4e343ac5b2763a3745be52580e4f830faf67f8c2bc0da6311225389a9a08bd",
+        "transcript": "No quiero café.",
+        "sourceFormat": "pcm16",
+        "durationSeconds": 1.5
+      },
+      "judgment": {
+        "probabilityCorrect": 0.9884,
+        "isCorrect": true,
+        "elapsedMs": 235,
+        "judgedAt": "2026-11-06T22:25:00.653Z",
+        "model": "@cf/cloudflare/clef-omni",
+        "request": {
+          "model": "clef-omni",
+          "state": "This is a Spanish language drill. Drill: Say “I don't want coffee” in Spanish.\nExpected response: No quiero café.\nGrade correctness from the actual recording, not from the expected response alone.",
+          "questions": {
+            "is_correct": {
+              "type": "noul",
+              "instructions": "Does the spoken Spanish response correctly answer the drill? Judge the actual audio. Reject different words, changed numbers, or missing negation; tolerate natural accent variation."
+            }
+          }
+        },
+        "response": {
+          "model": "clef-omni",
+          "answers": {
+            "is_correct": {
+              "type": "noul",
+              "noul": 0.9884
+            }
+          },
+          "usage": {
+            "input_tokens": 230,
+            "output_tokens": 0
+          }
+        }
+      }
+    },
+    {
+      "id": "past-future",
+      "category": "Changed tense",
+      "title": "Went or going?",
+      "prompt": "Say “I went to the market” in Spanish.",
+      "expectedText": "Fui al mercado.",
+      "spokenText": "Voy al mercado.",
+      "expectedTranslation": "I went to the market.",
+      "spokenTranslation": "I am going to the market.",
+      "expectedCorrect": false,
+      "note": "Voy describes going now or in the near future, not a completed trip in the past.",
+      "audio": {
+        "src": "/audio/past-future.mp3",
+        "model": "openai/gpt-audio-mini",
+        "voice": "alloy",
+        "generatedAt": "2026-11-06T22:25:01.858Z",
+        "sha256": "462f38b2c135921cbaa0eca921df3039eb3c1b0dcfaf6c1096c750d8cb4aa70f",
+        "transcript": "Voy al mercado.",
+        "sourceFormat": "pcm16",
+        "durationSeconds": 1.85
+      },
+      "judgment": {
+        "probabilityCorrect": 0.8973,
+        "isCorrect": true,
+        "elapsedMs": 277,
+        "judgedAt": "2026-11-06T22:25:02.136Z",
+        "model": "@cf/cloudflare/clef-omni",
+        "request": {
+          "model": "clef-omni",
+          "state": "This is a Spanish language drill. Drill: Say “I went to the market” in Spanish.\nExpected response: Fui al mercado.\nGrade correctness from the actual recording, not from the expected response alone.",
+          "questions": {
+            "is_correct": {
+              "type": "noul",
+              "instructions": "Does the spoken Spanish response correctly answer the drill? Judge the actual audio. Reject different words, changed numbers, or missing negation; tolerate natural accent variation."
+            }
+          }
+        },
+        "response": {
+          "model": "clef-omni",
+          "answers": {
+            "is_correct": {
+              "type": "noul",
+              "noul": 0.8973
+            }
+          },
+          "usage": {
+            "input_tokens": 235,
+            "output_tokens": 0
+          }
+        }
+      }
+    },
+    {
+      "id": "past-tense-control",
+      "category": "Correct control",
+      "title": "A completed trip",
+      "prompt": "Say “I went to the market” in Spanish.",
+      "expectedText": "Fui al mercado.",
+      "spokenText": "Fui al mercado.",
+      "expectedTranslation": "I went to the market.",
+      "spokenTranslation": "I went to the market.",
+      "expectedCorrect": true,
+      "note": "Fui expresses the completed past action requested by the drill.",
+      "audio": {
+        "src": "/audio/past-tense-control.mp3",
+        "model": "openai/gpt-audio-mini",
+        "voice": "alloy",
+        "generatedAt": "2026-11-06T22:25:03.431Z",
+        "sha256": "4d9801c937a4354eb1a62724e467a8c41be1b6eed6cb7f6542675d44e66bb3a4",
+        "transcript": "Fui al mercado.",
+        "sourceFormat": "pcm16",
+        "durationSeconds": 1.25
+      },
+      "judgment": {
+        "probabilityCorrect": 0.989,
+        "isCorrect": true,
+        "elapsedMs": 271,
+        "judgedAt": "2026-11-06T22:25:03.703Z",
+        "model": "@cf/cloudflare/clef-omni",
+        "request": {
+          "model": "clef-omni",
+          "state": "This is a Spanish language drill. Drill: Say “I went to the market” in Spanish.\nExpected response: Fui al mercado.\nGrade correctness from the actual recording, not from the expected response alone.",
+          "questions": {
+            "is_correct": {
+              "type": "noul",
+              "instructions": "Does the spoken Spanish response correctly answer the drill? Judge the actual audio. Reject different words, changed numbers, or missing negation; tolerate natural accent variation."
+            }
+          }
+        },
+        "response": {
+          "model": "clef-omni",
+          "answers": {
+            "is_correct": {
+              "type": "noul",
+              "noul": 0.989
+            }
+          },
+          "usage": {
+            "input_tokens": 228,
+            "output_tokens": 0
+          }
+        }
+      }
+    },
+    {
+      "id": "left-right",
+      "category": "Opposite direction",
+      "title": "Left or right?",
+      "prompt": "Say “Turn right” in Spanish.",
+      "expectedText": "Gira a la derecha.",
+      "spokenText": "Gira a la izquierda.",
+      "expectedTranslation": "Turn right.",
+      "spokenTranslation": "Turn left.",
+      "expectedCorrect": false,
+      "note": "Izquierda directs the listener left, the opposite of the requested derecha (right).",
+      "audio": {
+        "src": "/audio/left-right.mp3",
+        "model": "openai/gpt-audio-mini",
+        "voice": "alloy",
+        "generatedAt": "2026-11-06T22:25:05.049Z",
+        "sha256": "976a91295dd6b538c01d2a3a4c563f505ae96038171285a8d051886341a10b11",
+        "transcript": "Gira a la izquierda.",
+        "sourceFormat": "pcm16",
+        "durationSeconds": 1.55
+      },
+      "judgment": {
+        "probabilityCorrect": 0.0127,
+        "isCorrect": false,
+        "elapsedMs": 238,
+        "judgedAt": "2026-11-06T22:25:05.287Z",
+        "model": "@cf/cloudflare/clef-omni",
+        "request": {
+          "model": "clef-omni",
+          "state": "This is a Spanish language drill. Drill: Say “Turn right” in Spanish.\nExpected response: Gira a la derecha.\nGrade correctness from the actual recording, not from the expected response alone.",
+          "questions": {
+            "is_correct": {
+              "type": "noul",
+              "instructions": "Does the spoken Spanish response correctly answer the drill? Judge the actual audio. Reject different words, changed numbers, or missing negation; tolerate natural accent variation."
+            }
+          }
+        },
+        "response": {
+          "model": "clef-omni",
+          "answers": {
+            "is_correct": {
+              "type": "noul",
+              "noul": 0.0127
+            }
+          },
+          "usage": {
+            "input_tokens": 230,
+            "output_tokens": 0
+          }
+        }
+      }
+    },
+    {
+      "id": "direction-control",
+      "category": "Correct control",
+      "title": "The right direction",
+      "prompt": "Say “Turn right” in Spanish.",
+      "expectedText": "Gira a la derecha.",
+      "spokenText": "Gira a la derecha.",
+      "expectedTranslation": "Turn right.",
+      "spokenTranslation": "Turn right.",
+      "expectedCorrect": true,
+      "note": "The recording gives the requested right-turn instruction.",
+      "audio": {
+        "src": "/audio/direction-control.mp3",
+        "model": "openai/gpt-audio-mini",
+        "voice": "alloy",
+        "generatedAt": "2026-11-06T22:25:06.550Z",
+        "sha256": "0231641e5573fc83a4b05f42c6cf271f290038a2be6fecb3802dba79df431861",
+        "transcript": "Gira a la derecha.",
+        "sourceFormat": "pcm16",
+        "durationSeconds": 1.35
+      },
+      "judgment": {
+        "probabilityCorrect": 0.986,
+        "isCorrect": true,
+        "elapsedMs": 199,
+        "judgedAt": "2026-11-06T22:25:06.750Z",
+        "model": "@cf/cloudflare/clef-omni",
+        "request": {
+          "model": "clef-omni",
+          "state": "This is a Spanish language drill. Drill: Say “Turn right” in Spanish.\nExpected response: Gira a la derecha.\nGrade correctness from the actual recording, not from the expected response alone.",
+          "questions": {
+            "is_correct": {
+              "type": "noul",
+              "instructions": "Does the spoken Spanish response correctly answer the drill? Judge the actual audio. Reject different words, changed numbers, or missing negation; tolerate natural accent variation."
+            }
+          }
+        },
+        "response": {
+          "model": "clef-omni",
+          "answers": {
+            "is_correct": {
+              "type": "noul",
+              "noul": 0.986
+            }
+          },
+          "usage": {
+            "input_tokens": 228,
+            "output_tokens": 0
+          }
+        }
+      }
+    },
+    {
+      "id": "two-three-tickets",
+      "category": "Changed number",
+      "title": "Two tickets or three?",
+      "prompt": "Say “I want two tickets” in Spanish.",
+      "expectedText": "Quiero dos entradas.",
+      "spokenText": "Quiero tres entradas.",
+      "expectedTranslation": "I want two tickets.",
+      "spokenTranslation": "I want three tickets.",
+      "expectedCorrect": false,
+      "note": "The response changes the requested quantity from two to three.",
+      "audio": {
+        "src": "/audio/two-three-tickets.mp3",
+        "model": "openai/gpt-audio-mini",
+        "voice": "alloy",
+        "generatedAt": "2026-11-06T22:25:07.947Z",
+        "sha256": "5b14fc1eac256997fd815749f828df7fde9c3cc498512b34b44e92f6c0906bac",
+        "transcript": "Quiero tres entradas.",
+        "sourceFormat": "pcm16",
+        "durationSeconds": 1.65
+      },
+      "judgment": {
+        "probabilityCorrect": 0.0132,
+        "isCorrect": false,
+        "elapsedMs": 388,
+        "judgedAt": "2026-11-06T22:25:08.336Z",
+        "model": "@cf/cloudflare/clef-omni",
+        "request": {
+          "model": "clef-omni",
+          "state": "This is a Spanish language drill. Drill: Say “I want two tickets” in Spanish.\nExpected response: Quiero dos entradas.\nGrade correctness from the actual recording, not from the expected response alone.",
+          "questions": {
+            "is_correct": {
+              "type": "noul",
+              "instructions": "Does the spoken Spanish response correctly answer the drill? Judge the actual audio. Reject different words, changed numbers, or missing negation; tolerate natural accent variation."
+            }
+          }
+        },
+        "response": {
+          "model": "clef-omni",
+          "answers": {
+            "is_correct": {
+              "type": "noul",
+              "noul": 0.0132
+            }
+          },
+          "usage": {
+            "input_tokens": 233,
+            "output_tokens": 0
+          }
+        }
+      }
+    },
+    {
+      "id": "plural-control",
+      "category": "Correct control",
+      "title": "Sleeping cats",
+      "prompt": "Say “The cats sleep” in Spanish.",
+      "expectedText": "Los gatos duermen.",
+      "spokenText": "Los gatos duermen.",
+      "expectedTranslation": "The cats sleep.",
+      "spokenTranslation": "The cats sleep.",
+      "expectedCorrect": true,
+      "note": "The plural noun and verb correctly express the requested sentence.",
+      "audio": {
+        "src": "/audio/plural-control.mp3",
+        "model": "openai/gpt-audio-mini",
+        "voice": "alloy",
+        "generatedAt": "2026-11-06T22:25:09.581Z",
+        "sha256": "e83266ace95ea50ac7da8b025d3798e7f2c3c4e7efbe182b80f222343e3ba1ee",
+        "transcript": "Los gatos duermen.",
+        "sourceFormat": "pcm16",
+        "durationSeconds": 1.6
+      },
+      "judgment": {
+        "probabilityCorrect": 0.9868,
+        "isCorrect": true,
+        "elapsedMs": 192,
+        "judgedAt": "2026-11-06T22:25:09.773Z",
+        "model": "@cf/cloudflare/clef-omni",
+        "request": {
+          "model": "clef-omni",
+          "state": "This is a Spanish language drill. Drill: Say “The cats sleep” in Spanish.\nExpected response: Los gatos duermen.\nGrade correctness from the actual recording, not from the expected response alone.",
+          "questions": {
+            "is_correct": {
+              "type": "noul",
+              "instructions": "Does the spoken Spanish response correctly answer the drill? Judge the actual audio. Reject different words, changed numbers, or missing negation; tolerate natural accent variation."
+            }
+          }
+        },
+        "response": {
+          "model": "clef-omni",
+          "answers": {
+            "is_correct": {
+              "type": "noul",
+              "noul": 0.9868
+            }
+          },
+          "usage": {
+            "input_tokens": 231,
+            "output_tokens": 0
+          }
+        }
+      }
+    },
+    {
+      "id": "greeting-control",
+      "category": "Correct control",
+      "title": "A good morning",
+      "prompt": "Say “Good morning” in Spanish.",
+      "expectedText": "Buenos días.",
+      "spokenText": "Buenos días.",
+      "expectedTranslation": "Good morning.",
+      "spokenTranslation": "Good morning.",
+      "expectedCorrect": true,
+      "note": "The recording provides the standard Spanish morning greeting.",
+      "audio": {
+        "src": "/audio/greeting-control.mp3",
+        "model": "openai/gpt-audio-mini",
+        "voice": "alloy",
+        "generatedAt": "2026-11-06T22:25:11.227Z",
+        "sha256": "42325eca16ae50e09f438f44370b4708c8ccd32c577c043cfeffa7668f062919",
+        "transcript": "Buenos días.",
+        "sourceFormat": "pcm16",
+        "durationSeconds": 1.1
+      },
+      "judgment": {
+        "probabilityCorrect": 0.9884,
+        "isCorrect": true,
+        "elapsedMs": 267,
+        "judgedAt": "2026-11-06T22:25:11.494Z",
+        "model": "@cf/cloudflare/clef-omni",
+        "request": {
+          "model": "clef-omni",
+          "state": "This is a Spanish language drill. Drill: Say “Good morning” in Spanish.\nExpected response: Buenos días.\nGrade correctness from the actual recording, not from the expected response alone.",
+          "questions": {
+            "is_correct": {
+              "type": "noul",
+              "instructions": "Does the spoken Spanish response correctly answer the drill? Judge the actual audio. Reject different words, changed numbers, or missing negation; tolerate natural accent variation."
+            }
+          }
+        },
+        "response": {
+          "model": "clef-omni",
+          "answers": {
+            "is_correct": {
+              "type": "noul",
+              "noul": 0.9884
+            }
+          },
+          "usage": {
+            "input_tokens": 221,
+            "output_tokens": 0
+          }
+        }
+      }
+    },
+    {
+      "category": "Similar sounds",
+      "title": "Beach or silver?",
+      "prompt": "Say “beach” in Spanish.",
+      "expectedText": "playa",
+      "spokenText": "plata",
+      "expectedTranslation": "beach",
+      "spokenTranslation": "silver",
+      "expectedCorrect": false,
+      "note": "Plata means “silver,” not “beach” (playa); a consonant changes the word.",
+      "id": "playa-plata-clean",
+      "audio": {
+        "src": "/audio/playa-plata-clean.mp3",
+        "model": "openai/gpt-audio",
+        "voice": "alloy",
+        "generatedAt": "2026-11-06T23:46:10.731Z",
+        "sha256": "0b98171f880bbbfdea59fb9a56fab92336e1fc7b2c631c6d819ceb1be91e12d8",
+        "transcript": "plata",
+        "sourceFormat": "pcm16",
+        "durationSeconds": 4.35
+      },
+      "judgment": {
+        "probabilityCorrect": 0.0527,
+        "isCorrect": false,
+        "elapsedMs": 350,
+        "judgedAt": "2026-11-06T23:48:08.773Z",
+        "model": "@cf/cloudflare/clef-omni",
+        "request": {
+          "model": "clef-omni",
+          "state": "This is a Spanish language drill. Drill: Say “beach” in Spanish.\nExpected response: playa\nGrade correctness from the actual recording, not from the expected response alone.",
+          "questions": {
+            "is_correct": {
+              "type": "noul",
+              "instructions": "Does the spoken Spanish response correctly answer the drill? Judge the actual audio. Reject different words, changed numbers, or missing negation; tolerate natural accent variation."
+            }
+          }
+        },
+        "response": {
+          "model": "clef-omni",
+          "answers": {
+            "is_correct": {
+              "type": "noul",
+              "noul": 0.0527
+            }
+          },
+          "usage": {
+            "input_tokens": 262,
+            "output_tokens": 0
+          }
+        }
+      }
+    },
+    {
+      "category": "Changed meaning",
+      "title": "Hungry or thirsty?",
+      "prompt": "Say “I am hungry” in Spanish.",
+      "expectedText": "Tengo hambre.",
+      "spokenText": "Tengo sed.",
+      "expectedTranslation": "I am hungry.",
+      "spokenTranslation": "I am thirsty.",
+      "expectedCorrect": false,
+      "note": "Tengo sed expresses thirst, not the requested hunger (tengo hambre).",
+      "id": "hunger-thirst-clean",
+      "audio": {
+        "src": "/audio/hunger-thirst-clean.mp3",
+        "model": "openai/gpt-audio",
+        "voice": "alloy",
+        "generatedAt": "2026-11-06T23:46:11.860Z",
+        "sha256": "3dec9148daf747d4798f78cec3b288618aa11dcb95a6bbee07b89429b09d2d1b",
+        "transcript": "Tengo sed.",
+        "sourceFormat": "pcm16",
+        "durationSeconds": 1.25
+      },
+      "judgment": {
+        "probabilityCorrect": 0.0202,
+        "isCorrect": false,
+        "elapsedMs": 166,
+        "judgedAt": "2026-11-06T23:48:09.131Z",
+        "model": "@cf/cloudflare/clef-omni",
+        "request": {
+          "model": "clef-omni",
+          "state": "This is a Spanish language drill. Drill: Say “I am hungry” in Spanish.\nExpected response: Tengo hambre.\nGrade correctness from the actual recording, not from the expected response alone.",
+          "questions": {
+            "is_correct": {
+              "type": "noul",
+              "instructions": "Does the spoken Spanish response correctly answer the drill? Judge the actual audio. Reject different words, changed numbers, or missing negation; tolerate natural accent variation."
+            }
+          }
+        },
+        "response": {
+          "model": "clef-omni",
+          "answers": {
+            "is_correct": {
+              "type": "noul",
+              "noul": 0.0202
+            }
+          },
+          "usage": {
+            "input_tokens": 226,
+            "output_tokens": 0
+          }
+        }
+      }
+    },
+    {
+      "category": "Changed number",
+      "title": "Forty or fourteen?",
+      "prompt": "Say “forty” in Spanish.",
+      "expectedText": "cuarenta",
+      "spokenText": "catorce",
+      "expectedTranslation": "forty",
+      "spokenTranslation": "fourteen",
+      "expectedCorrect": false,
+      "note": "Catorce is fourteen; the requested number is forty (cuarenta).",
+      "id": "forty-fourteen-clean",
+      "audio": {
+        "src": "/audio/forty-fourteen-clean.mp3",
+        "model": "openai/gpt-audio",
+        "voice": "alloy",
+        "generatedAt": "2026-11-06T23:46:13.447Z",
+        "sha256": "c2f00f5e73be5e635bbce2e896ae6b7303ba4fe8972038856acf677622150074",
+        "transcript": "catorce",
+        "sourceFormat": "pcm16",
+        "durationSeconds": 3.25
+      },
+      "judgment": {
+        "probabilityCorrect": 0.0208,
+        "isCorrect": false,
+        "elapsedMs": 196,
+        "judgedAt": "2026-11-06T23:48:09.541Z",
+        "model": "@cf/cloudflare/clef-omni",
+        "request": {
+          "model": "clef-omni",
+          "state": "This is a Spanish language drill. Drill: Say “forty” in Spanish.\nExpected response: cuarenta\nGrade correctness from the actual recording, not from the expected response alone.",
+          "questions": {
+            "is_correct": {
+              "type": "noul",
+              "instructions": "Does the spoken Spanish response correctly answer the drill? Judge the actual audio. Reject different words, changed numbers, or missing negation; tolerate natural accent variation."
+            }
+          }
+        },
+        "response": {
+          "model": "clef-omni",
+          "answers": {
+            "is_correct": {
+              "type": "noul",
+              "noul": 0.0208
+            }
+          },
+          "usage": {
+            "input_tokens": 250,
+            "output_tokens": 0
+          }
+        }
+      }
+    },
+    {
+      "category": "Changed meaning",
+      "title": "Tomorrow or today?",
+      "prompt": "Say “See you tomorrow” in Spanish.",
+      "expectedText": "Nos vemos mañana.",
+      "spokenText": "Nos vemos hoy.",
+      "expectedTranslation": "See you tomorrow.",
+      "spokenTranslation": "See you today.",
+      "expectedCorrect": false,
+      "note": "Hoy changes the meeting time to today rather than tomorrow (mañana).",
+      "id": "tomorrow-today-clean",
+      "audio": {
+        "src": "/audio/tomorrow-today-clean.mp3",
+        "model": "openai/gpt-audio",
+        "voice": "alloy",
+        "generatedAt": "2026-11-06T23:46:14.859Z",
+        "sha256": "cef42d3ddaa6a4cb95a0b79e8efdc5e3d275087a93c17014c5318edec8c5e5db",
+        "transcript": "Nos vemos hoy.",
+        "sourceFormat": "pcm16",
+        "durationSeconds": 2.1
+      },
+      "judgment": {
+        "probabilityCorrect": 0.0118,
+        "isCorrect": false,
+        "elapsedMs": 158,
+        "judgedAt": "2026-11-06T23:48:09.926Z",
+        "model": "@cf/cloudflare/clef-omni",
+        "request": {
+          "model": "clef-omni",
+          "state": "This is a Spanish language drill. Drill: Say “See you tomorrow” in Spanish.\nExpected response: Nos vemos mañana.\nGrade correctness from the actual recording, not from the expected response alone.",
+          "questions": {
+            "is_correct": {
+              "type": "noul",
+              "instructions": "Does the spoken Spanish response correctly answer the drill? Judge the actual audio. Reject different words, changed numbers, or missing negation; tolerate natural accent variation."
+            }
+          }
+        },
+        "response": {
+          "model": "clef-omni",
+          "answers": {
+            "is_correct": {
+              "type": "noul",
+              "noul": 0.0118
+            }
+          },
+          "usage": {
+            "input_tokens": 237,
+            "output_tokens": 0
+          }
+        }
+      }
+    },
+    {
+      "category": "Opposite meaning",
+      "title": "Hot or cold?",
+      "prompt": "Say “It is hot” in Spanish, describing the temperature of an object.",
+      "expectedText": "Está caliente.",
+      "spokenText": "Está frío.",
+      "expectedTranslation": "It is hot.",
+      "spokenTranslation": "It is cold.",
+      "expectedCorrect": false,
+      "note": "Está frío describes a cold object, the opposite of the requested está caliente.",
+      "id": "hot-cold-clean",
+      "audio": {
+        "src": "/audio/hot-cold-clean.mp3",
+        "model": "openai/gpt-audio",
+        "voice": "alloy",
+        "generatedAt": "2026-11-06T23:46:16.531Z",
+        "sha256": "dfd91fb46828b2c09522ae3678659023e9b658ae7459d5b26aedef44d3ac356e",
+        "transcript": "Está frío.",
+        "sourceFormat": "pcm16",
+        "durationSeconds": 4.45
+      },
+      "judgment": {
+        "probabilityCorrect": 0.0128,
+        "isCorrect": false,
+        "elapsedMs": 432,
+        "judgedAt": "2026-11-06T23:48:10.567Z",
+        "model": "@cf/cloudflare/clef-omni",
+        "request": {
+          "model": "clef-omni",
+          "state": "This is a Spanish language drill. Drill: Say “It is hot” in Spanish, describing the temperature of an object.\nExpected response: Está caliente.\nGrade correctness from the actual recording, not from the expected response alone.",
+          "questions": {
+            "is_correct": {
+              "type": "noul",
+              "instructions": "Does the spoken Spanish response correctly answer the drill? Judge the actual audio. Reject different words, changed numbers, or missing negation; tolerate natural accent variation."
+            }
+          }
+        },
+        "response": {
+          "model": "clef-omni",
+          "answers": {
+            "is_correct": {
+              "type": "noul",
+              "noul": 0.0128
+            }
+          },
+          "usage": {
+            "input_tokens": 272,
+            "output_tokens": 0
+          }
+        }
+      }
+    },
+    {
+      "category": "Correct control",
+      "title": "Water, correctly",
+      "prompt": "Say “water” in Spanish.",
+      "expectedText": "agua",
+      "spokenText": "agua",
+      "expectedTranslation": "water",
+      "spokenTranslation": "water",
+      "expectedCorrect": true,
+      "note": "Agua is the requested Spanish word for water.",
+      "id": "water-control-clean",
+      "audio": {
+        "src": "/audio/water-control-clean.mp3",
+        "model": "openai/gpt-audio",
+        "voice": "alloy",
+        "generatedAt": "2026-11-06T23:46:17.730Z",
+        "sha256": "a4dbb0f98e66a1328fe3a726e60ef26e1fabc814ddb3686caa61d7fb79ff95bd",
+        "transcript": "agua",
+        "sourceFormat": "pcm16",
+        "durationSeconds": 1.45
+      },
+      "judgment": {
+        "probabilityCorrect": 0.9879,
+        "isCorrect": true,
+        "elapsedMs": 246,
+        "judgedAt": "2026-11-06T23:48:11.061Z",
+        "model": "@cf/cloudflare/clef-omni",
+        "request": {
+          "model": "clef-omni",
+          "state": "This is a Spanish language drill. Drill: Say “water” in Spanish.\nExpected response: agua\nGrade correctness from the actual recording, not from the expected response alone.",
+          "questions": {
+            "is_correct": {
+              "type": "noul",
+              "instructions": "Does the spoken Spanish response correctly answer the drill? Judge the actual audio. Reject different words, changed numbers, or missing negation; tolerate natural accent variation."
+            }
+          }
+        },
+        "response": {
+          "model": "clef-omni",
+          "answers": {
+            "is_correct": {
+              "type": "noul",
+              "noul": 0.9879
+            }
+          },
+          "usage": {
+            "input_tokens": 223,
+            "output_tokens": 0
+          }
+        }
+      }
+    },
+    {
+      "category": "Correct control",
+      "title": "A nearby station",
+      "prompt": "Say “The station is nearby” in Spanish.",
+      "expectedText": "La estación está cerca.",
+      "spokenText": "La estación está cerca.",
+      "expectedTranslation": "The station is nearby.",
+      "spokenTranslation": "The station is nearby.",
+      "expectedCorrect": true,
+      "note": "The response correctly says that the station is nearby.",
+      "id": "station-control-clean",
+      "audio": {
+        "src": "/audio/station-control-clean.mp3",
+        "model": "openai/gpt-audio",
+        "voice": "alloy",
+        "generatedAt": "2026-11-06T23:46:19.372Z",
+        "sha256": "7d3881b889826427a0223e14fd80ab75c6367cae69bf4b3a6db35eefe2486eb8",
+        "transcript": "La estación está cerca.",
+        "sourceFormat": "pcm16",
+        "durationSeconds": 4.15
+      },
+      "judgment": {
+        "probabilityCorrect": 0.984,
+        "isCorrect": true,
+        "elapsedMs": 174,
+        "judgedAt": "2026-11-06T23:48:11.463Z",
+        "model": "@cf/cloudflare/clef-omni",
+        "request": {
+          "model": "clef-omni",
+          "state": "This is a Spanish language drill. Drill: Say “The station is nearby” in Spanish.\nExpected response: La estación está cerca.\nGrade correctness from the actual recording, not from the expected response alone.",
+          "questions": {
+            "is_correct": {
+              "type": "noul",
+              "instructions": "Does the spoken Spanish response correctly answer the drill? Judge the actual audio. Reject different words, changed numbers, or missing negation; tolerate natural accent variation."
+            }
+          }
+        },
+        "response": {
+          "model": "clef-omni",
+          "answers": {
+            "is_correct": {
+              "type": "noul",
+              "noul": 0.984
+            }
+          },
+          "usage": {
+            "input_tokens": 265,
+            "output_tokens": 0
+          }
+        }
+      }
+    },
+    {
+      "category": "Correct control",
+      "title": "No meat, as requested",
+      "prompt": "Say “I do not eat meat” in Spanish.",
+      "expectedText": "No como carne.",
+      "spokenText": "No como carne.",
+      "expectedTranslation": "I do not eat meat.",
+      "spokenTranslation": "I do not eat meat.",
+      "expectedCorrect": true,
+      "note": "No preserves the requested negation: the speaker does not eat meat.",
+      "id": "meat-negation-control-clean",
+      "audio": {
+        "src": "/audio/meat-negation-control-clean.mp3",
+        "model": "openai/gpt-audio",
+        "voice": "alloy",
+        "generatedAt": "2026-11-06T23:46:20.535Z",
+        "sha256": "cd64bfad5c02e9bd1712ac95cdb78ea85da9457a7a595e07ce5b5cac0e922024",
+        "transcript": "No como carne.",
+        "sourceFormat": "pcm16",
+        "durationSeconds": 1.45
+      },
+      "judgment": {
+        "probabilityCorrect": 0.9882,
+        "isCorrect": true,
+        "elapsedMs": 206,
+        "judgedAt": "2026-11-06T23:48:11.831Z",
+        "model": "@cf/cloudflare/clef-omni",
+        "request": {
+          "model": "clef-omni",
+          "state": "This is a Spanish language drill. Drill: Say “I do not eat meat” in Spanish.\nExpected response: No como carne.\nGrade correctness from the actual recording, not from the expected response alone.",
+          "questions": {
+            "is_correct": {
+              "type": "noul",
+              "instructions": "Does the spoken Spanish response correctly answer the drill? Judge the actual audio. Reject different words, changed numbers, or missing negation; tolerate natural accent variation."
+            }
+          }
+        },
+        "response": {
+          "model": "clef-omni",
+          "answers": {
+            "is_correct": {
+              "type": "noul",
+              "noul": 0.9882
+            }
+          },
+          "usage": {
+            "input_tokens": 229,
+            "output_tokens": 0
+          }
+        }
+      }
+    },
+    {
+      "category": "Correct control",
+      "title": "A twenty-euro price",
+      "prompt": "Say “It costs twenty euros” in Spanish.",
+      "expectedText": "Cuesta veinte euros.",
+      "spokenText": "Cuesta veinte euros.",
+      "expectedTranslation": "It costs twenty euros.",
+      "spokenTranslation": "It costs twenty euros.",
+      "expectedCorrect": true,
+      "note": "The response gives the requested price of twenty euros.",
+      "id": "twenty-euros-control-clean",
+      "audio": {
+        "src": "/audio/twenty-euros-control-clean.mp3",
+        "model": "openai/gpt-audio",
+        "voice": "alloy",
+        "generatedAt": "2026-11-06T23:46:22.217Z",
+        "sha256": "84df800e32964a1d1cf3c1ffb546466a969954e081a2978267f5e319947de75c",
+        "transcript": "Cuesta veinte euros.",
+        "sourceFormat": "pcm16",
+        "durationSeconds": 4
+      },
+      "judgment": {
+        "probabilityCorrect": 0.9876,
+        "isCorrect": true,
+        "elapsedMs": 205,
+        "judgedAt": "2026-11-06T23:48:12.255Z",
+        "model": "@cf/cloudflare/clef-omni",
+        "request": {
+          "model": "clef-omni",
+          "state": "This is a Spanish language drill. Drill: Say “It costs twenty euros” in Spanish.\nExpected response: Cuesta veinte euros.\nGrade correctness from the actual recording, not from the expected response alone.",
+          "questions": {
+            "is_correct": {
+              "type": "noul",
+              "instructions": "Does the spoken Spanish response correctly answer the drill? Judge the actual audio. Reject different words, changed numbers, or missing negation; tolerate natural accent variation."
+            }
+          }
+        },
+        "response": {
+          "model": "clef-omni",
+          "answers": {
+            "is_correct": {
+              "type": "noul",
+              "noul": 0.9876
+            }
+          },
+          "usage": {
+            "input_tokens": 263,
+            "output_tokens": 0
+          }
+        }
+      }
+    },
+    {
+      "category": "Correct control",
+      "title": "Finding the bathroom",
+      "prompt": "Say “Where is the bathroom?” in Spanish.",
+      "expectedText": "¿Dónde está el baño?",
+      "spokenText": "¿Dónde está el baño?",
+      "expectedTranslation": "Where is the bathroom?",
+      "spokenTranslation": "Where is the bathroom?",
+      "expectedCorrect": true,
+      "note": "The response correctly asks where the bathroom is.",
+      "id": "bathroom-control-clean",
+      "audio": {
+        "src": "/audio/bathroom-control-clean.mp3",
+        "model": "openai/gpt-audio",
+        "voice": "alloy",
+        "generatedAt": "2026-11-06T23:46:23.489Z",
+        "sha256": "e721db761a429d709f43a2d5af588c1466b5e6c0b671dcda29e2fa3c2d4e2bc7",
+        "transcript": "¿Dónde está el baño?",
+        "sourceFormat": "pcm16",
+        "durationSeconds": 1.85
+      },
+      "judgment": {
+        "probabilityCorrect": 0.989,
+        "isCorrect": true,
+        "elapsedMs": 206,
+        "judgedAt": "2026-11-06T23:48:12.641Z",
+        "model": "@cf/cloudflare/clef-omni",
+        "request": {
+          "model": "clef-omni",
+          "state": "This is a Spanish language drill. Drill: Say “Where is the bathroom?” in Spanish.\nExpected response: ¿Dónde está el baño?\nGrade correctness from the actual recording, not from the expected response alone.",
+          "questions": {
+            "is_correct": {
+              "type": "noul",
+              "instructions": "Does the spoken Spanish response correctly answer the drill? Judge the actual audio. Reject different words, changed numbers, or missing negation; tolerate natural accent variation."
+            }
+          }
+        },
+        "response": {
+          "model": "clef-omni",
+          "answers": {
+            "is_correct": {
+              "type": "noul",
+              "noul": 0.989
+            }
+          },
+          "usage": {
+            "input_tokens": 237,
+            "output_tokens": 0
+          }
+        }
+      }
+    },
+    {
+      "id": "peso-beso",
+      "category": "Similar sounds",
+      "title": "Weight or kiss?",
+      "prompt": "Say “weight” in Spanish.",
+      "expectedText": "peso",
+      "spokenText": "beso",
+      "expectedTranslation": "weight",
+      "spokenTranslation": "kiss",
+      "expectedCorrect": false,
+      "note": "Changing the initial consonant from p to b changes peso (weight) into beso (kiss).",
+      "audio": {
+        "src": "/audio/peso-beso.mp3",
+        "model": "openai/gpt-audio",
+        "voice": "alloy",
+        "generatedAt": "2026-11-07T00:01:06.759Z",
+        "sha256": "2bdc61fc05cec2fa62ee3617ca20ec102905b337e463e3c9a0738938d3e68445",
+        "transcript": "beso",
+        "sourceFormat": "pcm16",
+        "durationSeconds": 1.5
+      },
+      "judgment": {
+        "probabilityCorrect": 0.9065,
+        "isCorrect": true,
+        "elapsedMs": 227,
+        "judgedAt": "2026-11-07T00:03:37.396Z",
+        "model": "@cf/cloudflare/clef-omni",
+        "request": {
+          "model": "clef-omni",
+          "state": "This is a Spanish language drill. Drill: Say “weight” in Spanish.\nExpected response: peso\nGrade correctness from the actual recording, not from the expected response alone.",
+          "questions": {
+            "is_correct": {
+              "type": "noul",
+              "instructions": "Does the spoken Spanish response correctly answer the drill? Judge the actual audio. Reject different words, changed numbers, or missing negation; tolerate natural accent variation."
+            }
+          }
+        },
+        "response": {
+          "model": "clef-omni",
+          "answers": {
+            "is_correct": {
+              "type": "noul",
+              "noul": 0.9065
+            }
+          },
+          "usage": {
+            "input_tokens": 224,
+            "output_tokens": 0
+          }
+        }
+      }
+    },
+    {
+      "id": "pata-bata",
+      "category": "Similar sounds",
+      "title": "An animal’s leg or robe?",
+      "prompt": "Say “an animal’s leg” in Spanish, using “pata”.",
+      "expectedText": "pata",
+      "spokenText": "bata",
+      "expectedTranslation": "an animal’s leg",
+      "spokenTranslation": "robe",
+      "expectedCorrect": false,
+      "note": "The initial consonant distinguishes pata (an animal’s leg) from bata (robe).",
+      "audio": {
+        "src": "/audio/pata-bata.mp3",
+        "model": "openai/gpt-audio",
+        "voice": "alloy",
+        "generatedAt": "2026-11-07T00:01:08.272Z",
+        "sha256": "1338b626eec0fd11c4ae066e41d72e83a38bbfe065ab153fb638d3881ac099a4",
+        "transcript": "bata",
+        "sourceFormat": "pcm16",
+        "durationSeconds": 4.25
+      },
+      "judgment": {
+        "probabilityCorrect": 0.9731,
+        "isCorrect": true,
+        "elapsedMs": 194,
+        "judgedAt": "2026-11-07T00:03:37.593Z",
+        "model": "@cf/cloudflare/clef-omni",
+        "request": {
+          "model": "clef-omni",
+          "state": "This is a Spanish language drill. Drill: Say “an animal’s leg” in Spanish, using “pata”.\nExpected response: pata\nGrade correctness from the actual recording, not from the expected response alone.",
+          "questions": {
+            "is_correct": {
+              "type": "noul",
+              "instructions": "Does the spoken Spanish response correctly answer the drill? Judge the actual audio. Reject different words, changed numbers, or missing negation; tolerate natural accent variation."
+            }
+          }
+        },
+        "response": {
+          "model": "clef-omni",
+          "answers": {
+            "is_correct": {
+              "type": "noul",
+              "noul": 0.9731
+            }
+          },
+          "usage": {
+            "input_tokens": 270,
+            "output_tokens": 0
+          }
+        }
+      }
+    },
+    {
+      "id": "pala-bala",
+      "category": "Similar sounds",
+      "title": "Shovel or bullet?",
+      "prompt": "Say “shovel” in Spanish.",
+      "expectedText": "pala",
+      "spokenText": "bala",
+      "expectedTranslation": "shovel",
+      "spokenTranslation": "bullet",
+      "expectedCorrect": false,
+      "note": "An initial b instead of p changes pala (shovel) into bala (bullet).",
+      "audio": {
+        "src": "/audio/pala-bala.mp3",
+        "model": "openai/gpt-audio",
+        "voice": "alloy",
+        "generatedAt": "2026-11-07T00:01:09.753Z",
+        "sha256": "e1c99063b31f9fde8c69991961f3da3bdb231508fcd4d075ffc1212c66bdd3dc",
+        "transcript": "bala",
+        "sourceFormat": "pcm16",
+        "durationSeconds": 3.15
+      },
+      "judgment": {
+        "probabilityCorrect": 0.5108,
+        "isCorrect": true,
+        "elapsedMs": 321,
+        "judgedAt": "2026-11-07T00:03:37.916Z",
+        "model": "@cf/cloudflare/clef-omni",
+        "request": {
+          "model": "clef-omni",
+          "state": "This is a Spanish language drill. Drill: Say “shovel” in Spanish.\nExpected response: pala\nGrade correctness from the actual recording, not from the expected response alone.",
+          "questions": {
+            "is_correct": {
+              "type": "noul",
+              "instructions": "Does the spoken Spanish response correctly answer the drill? Judge the actual audio. Reject different words, changed numbers, or missing negation; tolerate natural accent variation."
+            }
+          }
+        },
+        "response": {
+          "model": "clef-omni",
+          "answers": {
+            "is_correct": {
+              "type": "noul",
+              "noul": 0.5108
+            }
+          },
+          "usage": {
+            "input_tokens": 247,
+            "output_tokens": 0
+          }
+        }
+      }
+    },
+    {
+      "id": "jamon-jabon",
+      "category": "Similar sounds",
+      "title": "Ham or soap?",
+      "prompt": "Say “ham” in Spanish.",
+      "expectedText": "jamón",
+      "spokenText": "jabón",
+      "expectedTranslation": "ham",
+      "spokenTranslation": "soap",
+      "expectedCorrect": false,
+      "note": "The middle consonant changes jamón (ham) into jabón (soap); both stress the final syllable.",
+      "audio": {
+        "src": "/audio/jamon-jabon.mp3",
+        "model": "openai/gpt-audio",
+        "voice": "alloy",
+        "generatedAt": "2026-11-07T00:01:10.843Z",
+        "sha256": "9e88821e29080c3e45f7fb66e536f2c8cf98c4f72d252960ccd82fe7a572091e",
+        "transcript": "jabón",
+        "sourceFormat": "pcm16",
+        "durationSeconds": 1.3
+      },
+      "judgment": {
+        "probabilityCorrect": 0.5807,
+        "isCorrect": true,
+        "elapsedMs": 377,
+        "judgedAt": "2026-11-07T00:03:38.294Z",
+        "model": "@cf/cloudflare/clef-omni",
+        "request": {
+          "model": "clef-omni",
+          "state": "This is a Spanish language drill. Drill: Say “ham” in Spanish.\nExpected response: jamón\nGrade correctness from the actual recording, not from the expected response alone.",
+          "questions": {
+            "is_correct": {
+              "type": "noul",
+              "instructions": "Does the spoken Spanish response correctly answer the drill? Judge the actual audio. Reject different words, changed numbers, or missing negation; tolerate natural accent variation."
+            }
+          }
+        },
+        "response": {
+          "model": "clef-omni",
+          "answers": {
+            "is_correct": {
+              "type": "noul",
+              "noul": 0.5807
+            }
+          },
+          "usage": {
+            "input_tokens": 222,
+            "output_tokens": 0
+          }
+        }
+      }
+    },
+    {
+      "id": "pino-vino",
+      "category": "Similar sounds",
+      "title": "Pine tree or wine?",
+      "prompt": "Say “pine tree” in Spanish.",
+      "expectedText": "pino",
+      "spokenText": "vino",
+      "expectedTranslation": "pine tree",
+      "spokenTranslation": "wine",
+      "expectedCorrect": false,
+      "note": "The initial p in pino (pine tree) differs from the b sound written v in vino (wine).",
+      "audio": {
+        "src": "/audio/pino-vino.mp3",
+        "model": "openai/gpt-audio",
+        "voice": "alloy",
+        "generatedAt": "2026-11-07T00:01:12.351Z",
+        "sha256": "7cd58cc2c76ca4fe20adc08d2f0c8753fc487f47f213a350c80f777edd636a58",
+        "transcript": "vino",
+        "sourceFormat": "pcm16",
+        "durationSeconds": 2.25
+      },
+      "judgment": {
+        "probabilityCorrect": 0.963,
+        "isCorrect": true,
+        "elapsedMs": 255,
+        "judgedAt": "2026-11-07T00:03:38.552Z",
+        "model": "@cf/cloudflare/clef-omni",
+        "request": {
+          "model": "clef-omni",
+          "state": "This is a Spanish language drill. Drill: Say “pine tree” in Spanish.\nExpected response: pino\nGrade correctness from the actual recording, not from the expected response alone.",
+          "questions": {
+            "is_correct": {
+              "type": "noul",
+              "instructions": "Does the spoken Spanish response correctly answer the drill? Judge the actual audio. Reject different words, changed numbers, or missing negation; tolerate natural accent variation."
+            }
+          }
+        },
+        "response": {
+          "model": "clef-omni",
+          "answers": {
+            "is_correct": {
+              "type": "noul",
+              "noul": 0.963
+            }
+          },
+          "usage": {
+            "input_tokens": 236,
+            "output_tokens": 0
+          }
+        }
+      }
+    },
+    {
+      "id": "pelo-pero",
+      "category": "Similar sounds",
+      "title": "Hair or but?",
+      "prompt": "Say “hair” in Spanish.",
+      "expectedText": "pelo",
+      "spokenText": "pero",
+      "expectedTranslation": "hair",
+      "spokenTranslation": "but",
+      "expectedCorrect": false,
+      "note": "Replacing l with a tapped r changes pelo (hair) into pero (but).",
+      "audio": {
+        "src": "/audio/pelo-pero.mp3",
+        "model": "openai/gpt-audio",
+        "voice": "alloy",
+        "generatedAt": "2026-11-07T00:01:13.762Z",
+        "sha256": "27a16619367e3d518a00316f73837a49f096aa26373f62ddef774563ca13d3b9",
+        "transcript": "pero",
+        "sourceFormat": "pcm16",
+        "durationSeconds": 3.65
+      },
+      "judgment": {
+        "probabilityCorrect": 0.7131,
+        "isCorrect": true,
+        "elapsedMs": 207,
+        "judgedAt": "2026-11-07T00:03:38.761Z",
+        "model": "@cf/cloudflare/clef-omni",
+        "request": {
+          "model": "clef-omni",
+          "state": "This is a Spanish language drill. Drill: Say “hair” in Spanish.\nExpected response: pelo\nGrade correctness from the actual recording, not from the expected response alone.",
+          "questions": {
+            "is_correct": {
+              "type": "noul",
+              "instructions": "Does the spoken Spanish response correctly answer the drill? Judge the actual audio. Reject different words, changed numbers, or missing negation; tolerate natural accent variation."
+            }
+          }
+        },
+        "response": {
+          "model": "clef-omni",
+          "answers": {
+            "is_correct": {
+              "type": "noul",
+              "noul": 0.7131
+            }
+          },
+          "usage": {
+            "input_tokens": 252,
+            "output_tokens": 0
+          }
+        }
+      }
+    },
+    {
+      "id": "loma-lona",
+      "category": "Similar sounds",
+      "title": "Hill or canvas?",
+      "prompt": "Say “hill” in Spanish, using “loma”.",
+      "expectedText": "loma",
+      "spokenText": "lona",
+      "expectedTranslation": "hill",
+      "spokenTranslation": "canvas",
+      "expectedCorrect": false,
+      "note": "The nasal consonant changes loma (hill) into lona (canvas): m becomes n.",
+      "audio": {
+        "src": "/audio/loma-lona.mp3",
+        "model": "openai/gpt-audio",
+        "voice": "alloy",
+        "generatedAt": "2026-11-07T00:01:19.323Z",
+        "sha256": "e186dc097dc49ddcb32783796324861b47a06c9a4425536e09a098d300a2e202",
+        "transcript": "lona",
+        "sourceFormat": "pcm16",
+        "durationSeconds": 2.5
+      },
+      "judgment": {
+        "probabilityCorrect": 0.8989,
+        "isCorrect": true,
+        "elapsedMs": 189,
+        "judgedAt": "2026-11-07T00:03:39.778Z",
+        "model": "@cf/cloudflare/clef-omni",
+        "request": {
+          "model": "clef-omni",
+          "state": "This is a Spanish language drill. Drill: Say “hill” in Spanish, using “loma”.\nExpected response: loma\nGrade correctness from the actual recording, not from the expected response alone.",
+          "questions": {
+            "is_correct": {
+              "type": "noul",
+              "instructions": "Does the spoken Spanish response correctly answer the drill? Judge the actual audio. Reject different words, changed numbers, or missing negation; tolerate natural accent variation."
+            }
+          }
+        },
+        "response": {
+          "model": "clef-omni",
+          "answers": {
+            "is_correct": {
+              "type": "noul",
+              "noul": 0.8989
+            }
+          },
+          "usage": {
+            "input_tokens": 244,
+            "output_tokens": 0
+          }
+        }
+      }
+    },
+    {
+      "id": "lago-lado",
+      "category": "Similar sounds",
+      "title": "Lake or side?",
+      "prompt": "Say “lake” in Spanish.",
+      "expectedText": "lago",
+      "spokenText": "lado",
+      "expectedTranslation": "lake",
+      "spokenTranslation": "side",
+      "expectedCorrect": false,
+      "note": "The middle consonant distinguishes lago (lake) from lado (side).",
+      "audio": {
+        "src": "/audio/lago-lado.mp3",
+        "model": "openai/gpt-audio",
+        "voice": "alloy",
+        "generatedAt": "2026-11-07T00:01:20.660Z",
+        "sha256": "fb7c90f2e44c4f0e48a884ff225562a7b082347edab2c2c0961ed2f07b8a697e",
+        "transcript": "lado",
+        "sourceFormat": "pcm16",
+        "durationSeconds": 2.25
+      },
+      "judgment": {
+        "probabilityCorrect": 0.6292,
+        "isCorrect": true,
+        "elapsedMs": 333,
+        "judgedAt": "2026-11-07T00:03:40.112Z",
+        "model": "@cf/cloudflare/clef-omni",
+        "request": {
+          "model": "clef-omni",
+          "state": "This is a Spanish language drill. Drill: Say “lake” in Spanish.\nExpected response: lago\nGrade correctness from the actual recording, not from the expected response alone.",
+          "questions": {
+            "is_correct": {
+              "type": "noul",
+              "instructions": "Does the spoken Spanish response correctly answer the drill? Judge the actual audio. Reject different words, changed numbers, or missing negation; tolerate natural accent variation."
+            }
+          }
+        },
+        "response": {
+          "model": "clef-omni",
+          "answers": {
+            "is_correct": {
+              "type": "noul",
+              "noul": 0.6292
+            }
+          },
+          "usage": {
+            "input_tokens": 235,
+            "output_tokens": 0
+          }
+        }
+      }
+    },
+    {
+      "id": "manga-mango",
+      "category": "Similar sounds",
+      "title": "Sleeve or mango?",
+      "prompt": "Say “sleeve” in Spanish.",
+      "expectedText": "manga",
+      "spokenText": "mango",
+      "expectedTranslation": "sleeve",
+      "spokenTranslation": "mango",
+      "expectedCorrect": false,
+      "note": "Changing the final vowel from a to o changes manga (sleeve) into mango (the fruit).",
+      "audio": {
+        "src": "/audio/manga-mango.mp3",
+        "model": "openai/gpt-audio",
+        "voice": "alloy",
+        "generatedAt": "2026-11-07T00:01:22.142Z",
+        "sha256": "fc777db092e0d7e9d6569f4745f31db928f5fdd3ebde699159d7f0c16a5f101e",
+        "transcript": "mango",
+        "sourceFormat": "pcm16",
+        "durationSeconds": 3.85
+      },
+      "judgment": {
+        "probabilityCorrect": 0.9724,
+        "isCorrect": true,
+        "elapsedMs": 200,
+        "judgedAt": "2026-11-07T00:03:40.313Z",
+        "model": "@cf/cloudflare/clef-omni",
+        "request": {
+          "model": "clef-omni",
+          "state": "This is a Spanish language drill. Drill: Say “sleeve” in Spanish.\nExpected response: manga\nGrade correctness from the actual recording, not from the expected response alone.",
+          "questions": {
+            "is_correct": {
+              "type": "noul",
+              "instructions": "Does the spoken Spanish response correctly answer the drill? Judge the actual audio. Reject different words, changed numbers, or missing negation; tolerate natural accent variation."
+            }
+          }
+        },
+        "response": {
+          "model": "clef-omni",
+          "answers": {
+            "is_correct": {
+              "type": "noul",
+              "noul": 0.9724
+            }
+          },
+          "usage": {
+            "input_tokens": 256,
+            "output_tokens": 0
+          }
+        }
+      }
+    },
+    {
+      "id": "boca-poca",
+      "category": "Similar sounds",
+      "title": "Mouth or little?",
+      "prompt": "Say “mouth” in Spanish.",
+      "expectedText": "boca",
+      "spokenText": "poca",
+      "expectedTranslation": "mouth",
+      "spokenTranslation": "little (feminine)",
+      "expectedCorrect": false,
+      "note": "The initial consonant changes boca (mouth) into poca, the feminine form of “little.”",
+      "audio": {
+        "src": "/audio/boca-poca.mp3",
+        "model": "openai/gpt-audio",
+        "voice": "alloy",
+        "generatedAt": "2026-11-07T00:01:24.866Z",
+        "sha256": "5d6bda1b19b602c8e94e91fb7b1ee97d79f6fcec916b58306fd6c391b1369e7b",
+        "transcript": "poca",
+        "sourceFormat": "pcm16",
+        "durationSeconds": 3.05
+      },
+      "judgment": {
+        "probabilityCorrect": 0.9877,
+        "isCorrect": true,
+        "elapsedMs": 283,
+        "judgedAt": "2026-11-07T00:03:40.597Z",
+        "model": "@cf/cloudflare/clef-omni",
+        "request": {
+          "model": "clef-omni",
+          "state": "This is a Spanish language drill. Drill: Say “mouth” in Spanish.\nExpected response: boca\nGrade correctness from the actual recording, not from the expected response alone.",
+          "questions": {
+            "is_correct": {
+              "type": "noul",
+              "instructions": "Does the spoken Spanish response correctly answer the drill? Judge the actual audio. Reject different words, changed numbers, or missing negation; tolerate natural accent variation."
+            }
+          }
+        },
+        "response": {
+          "model": "clef-omni",
+          "answers": {
+            "is_correct": {
+              "type": "noul",
+              "noul": 0.9877
+            }
+          },
+          "usage": {
+            "input_tokens": 244,
+            "output_tokens": 0
+          }
+        }
+      }
+    },
+    {
+      "id": "hambre-hombre",
+      "category": "Similar sounds",
+      "title": "Hunger or man?",
+      "prompt": "Say “hunger” in Spanish.",
+      "expectedText": "hambre",
+      "spokenText": "hombre",
+      "expectedTranslation": "hunger",
+      "spokenTranslation": "man",
+      "expectedCorrect": false,
+      "note": "The first vowel distinguishes hambre (hunger) from hombre (man).",
+      "audio": {
+        "src": "/audio/hambre-hombre.mp3",
+        "model": "openai/gpt-audio",
+        "voice": "alloy",
+        "generatedAt": "2026-11-07T00:01:27.189Z",
+        "sha256": "80068b5d00885abbb747dc4f00527194a22a3dea6b5870ba1fbf3c6d20479791",
+        "transcript": "hombre",
+        "sourceFormat": "pcm16",
+        "durationSeconds": 3.75
+      },
+      "judgment": {
+        "probabilityCorrect": 0.9421,
+        "isCorrect": true,
+        "elapsedMs": 207,
+        "judgedAt": "2026-11-07T00:03:40.805Z",
+        "model": "@cf/cloudflare/clef-omni",
+        "request": {
+          "model": "clef-omni",
+          "state": "This is a Spanish language drill. Drill: Say “hunger” in Spanish.\nExpected response: hambre\nGrade correctness from the actual recording, not from the expected response alone.",
+          "questions": {
+            "is_correct": {
+              "type": "noul",
+              "instructions": "Does the spoken Spanish response correctly answer the drill? Judge the actual audio. Reject different words, changed numbers, or missing negation; tolerate natural accent variation."
+            }
+          }
+        },
+        "response": {
+          "model": "clef-omni",
+          "answers": {
+            "is_correct": {
+              "type": "noul",
+              "noul": 0.9421
+            }
+          },
+          "usage": {
+            "input_tokens": 255,
+            "output_tokens": 0
+          }
+        }
+      }
+    },
+    {
+      "id": "oveja-abeja",
+      "category": "Similar sounds",
+      "title": "Sheep or bee?",
+      "prompt": "Say “sheep” in Spanish.",
+      "expectedText": "oveja",
+      "spokenText": "abeja",
+      "expectedTranslation": "sheep",
+      "spokenTranslation": "bee",
+      "expectedCorrect": false,
+      "note": "The first vowel changes oveja (sheep) into abeja (bee); Spanish b and v represent the same consonant phoneme.",
+      "audio": {
+        "src": "/audio/oveja-abeja.mp3",
+        "model": "openai/gpt-audio",
+        "voice": "alloy",
+        "generatedAt": "2026-11-07T00:01:28.344Z",
+        "sha256": "5066cc02a6366b292e0e6869e6af780a247df9966012b1c216846b66c27b2da6",
+        "transcript": "abeja",
+        "sourceFormat": "pcm16",
+        "durationSeconds": 1.45
+      },
+      "judgment": {
+        "probabilityCorrect": 0.1485,
+        "isCorrect": false,
+        "elapsedMs": 203,
+        "judgedAt": "2026-11-07T00:03:41.010Z",
+        "model": "@cf/cloudflare/clef-omni",
+        "request": {
+          "model": "clef-omni",
+          "state": "This is a Spanish language drill. Drill: Say “sheep” in Spanish.\nExpected response: oveja\nGrade correctness from the actual recording, not from the expected response alone.",
+          "questions": {
+            "is_correct": {
+              "type": "noul",
+              "instructions": "Does the spoken Spanish response correctly answer the drill? Judge the actual audio. Reject different words, changed numbers, or missing negation; tolerate natural accent variation."
+            }
+          }
+        },
+        "response": {
+          "model": "clef-omni",
+          "answers": {
+            "is_correct": {
+              "type": "noul",
+              "noul": 0.1485
+            }
+          },
+          "usage": {
+            "input_tokens": 226,
+            "output_tokens": 0
+          }
+        }
+      }
+    }
+  ]
+}
